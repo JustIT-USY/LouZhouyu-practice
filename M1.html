@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>网址标题</title>
+    <base target="_self">
+    <!--base 统一所有超链接-->
 </head>
 <body>
-    <h1>标题</h1>
-    <hr>
-    <p>段落</p>
-    zzzzzzz<br>     <!--br换行用，几个换几行，下一句话在这行下面-->
-    <img src="img/01.png"  weith="宽" title="描述图片"alt="图片不存在时显示的文字"><br>
-        <!--src="../01.png    ../  上级文件夹"-->
-    <a href="file:///C:/text/%E8%91%9B%E5%A7%90%E5%A7%90.html">图片</a><br>
-    <a href="file:///C:/text/%E8%91%9B%E5%A7%90%E5%A7%90.html"><img src="img/01.png" weith="60"alt="该图片无法显示"></a>
-        <!--<a href="要跳转的页面,如果是指定的地址，要加http://">要显示的内容</a>-->
+
+<h1>标题</h1>
+<a href="#底部">底部</a>
+<a href="测试.html#01">跳转到测试</a>
+<!--id 在跳转目标的开始部分编写    可以跳转到指定地址的指定位置-->
+<hr>
+
+<p>段落</p>
+
+zzzzzzz<br><!--br换行用，几个换几行，下一句话在这行下面-->
+
+<img src="img/01.png"  width="150" title="描述图片"alt="图片不存在时显示的文字"><br>
+<!--src="../01.png    ../  上级文件夹"-->
+
+<a href="file:///C:/text/%E8%91%9B%E5%A7%90%E5%A7%90.html"><h1>图片</h1></a><br>
+<a href="file:///C:/text/%E8%91%9B%E5%A7%90%E5%A7%90.html"><img src="img/01.png" width="300"alt="该图片无法显示"></a><br>
+<!--<a href="要跳转的页面,如果是指定的地址，要加http://">要显示的内容</a>-->
+<a href="http://www.baidu.com" target="_blank">xxx</a>
+<!--target="_blank"    新建界面    target="_self"-->
+<h2>无序列表</h2>
+<ul>
+    <li>
+        <h1>A</h1>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+        </ul>
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<!--ul>li*n+ Tab   快速生成一对ulz中包含n个li-->
+<h6 id="底部">底部</h6>
+<a href="#">回到顶部</a>
+<!--<a href="#">  假链接，点击后不跳转，回到顶部，"javascript"  不跳转，无反应-->
 </body>
 </html>
