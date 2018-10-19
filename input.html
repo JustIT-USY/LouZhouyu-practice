@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<form action="http://www.qq.com">
+    <!--明文输入框-->
+    <label for="cc">账号：</label><input type="text"  id="cc" name="xx"><br>
+    <!--name告诉submit要提交-->
+    <!--<label>,用for绑定id，使点文字时锁定到文本框-->
+    <!--暗文输入框-->
+    <label for="dd">密码：</label><input type="password" name="pwd" id="dd"><br>
+    <!--给输入框设置默认值-->
+    账号：<input type="text" value="lzy"><br>
+    密码：<input type="password" value="123"><br>
+    <!--单选框
+    默认情况下单选框不会互斥，想要互斥每一个都要设置一个name属性并且属性必须设置相同的值
+    要想单选框默认选中一个框，可以设置一个checked-->
+    <P>性别：
+    <input type="radio" name="11" checked="checked" value="male">男
+    <input type="radio" name="11" value="female">女
+    <input type="radio" name="11">保密</P>
+    <!--多选框-->
+    <p>爱好：
+    <input type="checkbox" name="sport" value="base">篮球
+    <input type="checkbox" name="sport" value="football">足球
+    <input type="checkbox" name="sport">羽毛球</p>
+    <!--在单选框和多选框中name必须一样
+    在表单标签中，除了按钮标以外的标签，都可以通过value来指定需要提交到服务器的数据-->
+    <!--按钮,配合js完成一些操作-->
+    <input type="button" value="按钮"><br>
+    <input type="image" src="img/01.png"><br>
+    <input type="reset"><br><!--重置输入框中的数据，默认叫重置-->
+    <input type="submit"><br>
+    <!--将表单中的数据提交到远程服务器
+    1.告诉表单提交到哪个服务器
+    2.提交哪些数据-->
+
+    <!--隐藏域-->
+    <input type="hidden" name="xx" value="99">
+</form>
+</body>
+</html>

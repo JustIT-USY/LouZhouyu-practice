@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+</head>
+<body>
+<video src="../text/video/20181015_183948_4942.mp4" autoplay="autoplay" controls="controls" poster="img/01.png">
+</video>
+<p>
+    autoplay:默认不播放，通过autoplay设置自动播放
+    controls:通过controls显示控制条
+    poster:视频播放前显示的占位图片
+    loop:一般用于广告视频，循环播放，没有controls
+    preload:预加载视频，但与autoplay相冲，如果设置autoplay，preload失效
+    muted：静音
+</p>
+<video >
+    <source src=".webm" type="video/webm"></source>
+    <source src=".mp4" type="video/mp4"></source>
+    <source src=".ogg" type="video/ogg"></source>
+</video>
+<p>第二种存在的意义就是为了解决浏览器适配问题</p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-文字属性</title>
+    <style>
+        p{
+            /*font-style: italic;
+            font-weight: bold;
+            font-size:35px;
+            font-family:"Times New Roman",'楷体' ;
+            */
+            font:italic bold 10px "楷体";
+            /*缩写格式：font:italic bold 10px "楷体";
+            注意点：size 和 family 不能省略且顺序不能交换
+            size在family前，且两者在最后
+            */
+        }
+    </style>
+</head>
+<body>
+<!--
+1.规定文字样式的属性
+格式:font-style:italic;
+取值：
+normal:正常的，默认
+italic:倾斜的
+快捷键：font-style：italic;=fs+Tab
+font-style：narmal;=fsn+Tab
+2.规定文字粗细的属性
+格式：font-weight: bold;
+单词取值：
+bold 加粗
+bolder 更粗
+lighter 细线，默认就是细线
+快捷键 fw  font-weight: ;
+fwb   font-weight: bold;
+fwbr  font-weight: bolder;
+数字取值（文字粗细）
+100-900之间整百的数字
+3.规定文字大小的属性
+格式：font-size: ;
+（单位是px,要带上px)
+快捷键
+fz font-size: ;
+fz30 font-size:30 ;
+4.规定文字字体的属性
+格式  font-family: ;
+(默认宋体，如果取值是中文，需要用双引号或者单引号且用户电脑安装了字体)
+快捷键 ff
+可以给字体设置备选方案
+格式：font-family:"字体1","备选方案1"，，，，
+中文字体可以处理英文字体，但英文字体不能处理中文
+如果想给英文单独设置字体，英文字体设置在前面，中文字体设置为备选方案
+
+
+
+
+
+-->
+<p>我是段落abc</p>
+<p>我是段落abc</p>
+</body>
+</html>
