@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MySQL</title>
+    <style>
+        h1{font-size: 50px;
+        color: blue; text-align: center}
+        p{
+            font-size: 20px;}
+    </style>
+</head>
+<body>
+<h1>MySQL</h1>
+<p>第一步-下载</p>
+<a href="https://www.mysql.com/">下载地址</a>
+<p>第二步-安装</p>
+1.msi格式的，这种格式直接点击安装<br>
+2.zip格式的，zip格式是自己解压，解压缩之后其实MySQL就可以使用了，但是要进行配置。
+<p>第三步-配置</p>
+1.配置环境变量：我的电脑->属性->高级->环境变量，选择PATH,添加你的mysql bin文件夹的路径<br>
+<img src="img/环境变量.png" alt="无法显示" width="400px"><br>
+2.自己建立一个my.ini文件<br>
+<img src="img/ini.png" alt="无法显示" width="400px"><br>
+3.以管理员身份运行cmd,输入：cd  bin文件夹的路径,输入mysqld -install进行安装，执行命令后提示：Service successfully installed. 表示安装成功<br>
+4.执行mysqld --initialize-insecure --user=mysql进行MySQL的初始化<br>
+5.执行net start mysql以启动mysql服务<br>
+执行后会有如下提示：
+MySQL服务正在启动.
+MySQL服务已经启动成功<br>
+6.设置新密码<br>
+mysqladmin -u root -p password 新密码
+Enter password: 旧密码(回车）
+</body>
+</html>
