@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易实战</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+            margin: 0;
+            padding: 0;
+        }
+        a{text-decoration: none;
+            font-size: 12px;}
+        .header{width: 960px;
+            height: 80px;
+            background-color:#f5f5f5;
+            margin: 0 auto;
+            padding-top: 28px;
+            box-sizing: border-box;}
+        .header .logo{
+            width: 644px;
+            height: 27px;
+            background: url("img/logo.png");
+            float: left;}
+        .header .logo a{
+              display: inline-block;
+              height: 27px;
+              width: 131px;}
+        .header .links{
+            float: right;
+            height: 27px;
+            width: 200px;
+            text-align: right;}
+        .header .links a{
+            /*text-decoration: none;*/
+            /*font-size: 12px;*/
+            /*color: #ccc;*/
+            line-height: 27px;}
+        .content{width: 960px;
+            height: 630px;
+            margin: 0 auto;}
+        .content .top{
+            width: 960px;
+            height: 38px;
+            background:url("img/content-top1.png") repeat-x;}
+        .content .left{
+            width: 960px;
+            height: 38px;
+            background: url("img/content-top2.png")no-repeat left 0;}
+        .content .right{
+            width: 960px;
+            height: 38px;
+            background: url("img/content-top3.png")no-repeat right 0;}
+        .content .left h1{
+            font-size: 12px;
+            color: white;
+            line-height: 38px;
+        text-indent: 2em}
+        .content .bottom{
+            width: 960px;
+            height: 562px;}
+        .content .bottom .article{
+            width:642px;
+            height: 600px;
+            float: left;
+            padding-left:80px;
+            padding-top:50px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-top: none;}
+        .content .bottom .article .articleTop{
+            width: 560px;
+            height: 60px;}
+        .content .bottom .article .articleTop ul{
+            list-style: none;
+            width: 412px;
+            height: 34px;
+            background: url("img/tab.jpg") no-repeat left 0;}
+        .content .bottom .article .articleTop ul li{
+            float: left;
+            width: 137px;
+            height: 34px;
+            line-height: 34px;
+            text-align:center;}
+        ul,li{margin: 0;padding: 0;list-style: none;}
+        li{display: inline}
+        /*在li的前面有空位，通过上面两行取消，但是教程中没有出现问题*/
+        .content .bottom .article .articleBottom{
+            width: 560px;
+            height: 373px;}
+        .content .bottom .article .articleBottom .line{
+            width: 413px;
+            height: 28px;}
+        .content .bottom .article .articleBottom .line span{
+            width: 70px;
+            float:left;
+            height: 28px;
+            font-size: 12px;
+            line-height: 28px;
+            text-align: right;}
+        .content .bottom .article .articleBottom .line .star{
+            width: 0px;color: red;}
+        .content .bottom .article .articleBottom .line input{
+            width: 214px;
+            height: 23px;}
+        .content .bottom .article .articleBottom .line select{
+            height: 28px;
+            width:90px;
+            float: right;}
+        /*在fr之前，框不能和上面对齐，本来是width:100，但是就算下面@前后的换行取消也不能在同一行*/
+        .content .bottom .article .articleBottom .line div{
+            width: 333px;
+            float: right;
+            height: 28px;}
+        .content .bottom .article .articleBottom p{
+            font-size: 12px;
+            margin-left: 80px;
+            line-height: 28px;}
+        .content .bottom .article .articleBottom .line .special{
+            width: 329px;}
+        .content .bottom .article .articleBottom .line img{
+            width: 100px;
+            float: left;
+            height: 28px;}
+        .content .bottom .article .articleBottom .line .vcodeInput{
+            float: left;}
+        /*想让多个盒子对齐，可以让盒子浮动*/
+        .content .bottom .article .articleBottom .line .check{
+            width: 10px;height: 10px;}
+        .content .bottom .article .articleBottom input[type=submit]{
+            width: 119px;
+            height: 30px;
+            background: url("img/sumbit.png")no-repeat;
+            border: none;
+            font-size: 20px;
+            color: white;}
+        .content .bottom .aside{
+            width: 318px;
+            height: 600px;
+            float: right;
+            padding-top: 105px;
+            padding-left: 45px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            border: 1px solid #cccccc;}
+        .footer{width: 960px;
+            height: 48px;
+            margin: 0 auto;}
+        .footer p {font-size: 12px;
+            color: #ccc;
+            text-align: center;}
+        .footer p a{color: #ccc}
+    </style>
+</head>
+<body>
+<!--头部开始-->
+<div class="header">
+    <div class="logo"><a href="#" title="网易163免费邮"></a><a href="#" title="网易126免费邮"></a><a href="#" title="网易Yeah.net免费邮"></a></div>
+    <!--浏览器会把换行当一个空格-->
+    <div class="links"><a href="#">了解更多</a>|<a href="#">反馈意见</a></div>
+</div>
+<!--头部结束-->
+<!--内容开始-->
+<div class="content">
+    <!--内容顶部-->
+    <div class="top">
+        <div class="left"><h1>欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</h1>
+            <div class="right"></div>
+        </div>
+    </div>
+    <!--内容顶部结束-->
+    <!--内容底部-->
+    <div class="bottom">
+        <!--底部左开始-->
+        <div class="article">
+            <div class="articleTop">
+                <ul>
+                    <li>注册字母邮箱</li>
+                    <li>注册手机号码邮箱</li>
+                    <li>注册VIP邮箱</li>
+                </ul>
+            </div>
+            <div class="articleBottom">
+                <div class="line">
+                    <span><span class="star">*</span>邮箱注册</span>
+                    <div>
+                        <input type="text" value="建议使用手机号码注册">@<select>
+                            <option value="163.com">163.com</option>
+                            <option value="126.com">126.com</option>
+                            <option value="lnj.net">lnj.net</option>
+                        </select>
+                    </div>
+                    <p>6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
+                    <span><span class="star">*</span>密码</span>
+                    <div><input type="password" class="special"></div>
+                    <p>6~16个字符，区分大小写</p>
+                    <span><span class="star">*</span>确认密码</span>
+                    <div><input type="password" class="special"></div>
+                    <p>请再次填写密码</p>
+                    <span><span class="star">*</span>手机号码</span>
+                    <div><input type="text" class="special">
+                    </div>
+                    <p>忘记密码时，可以通过该手机号码快速找回密码</p>
+                    <span><span class="star">*</span>验证码</span>
+                    <div><input type="text" class="vcodeInput"><img src="img/call.jpg" alt="无法显示">
+                    </div>
+                    <p>请填写图片中的字符，不区分大小写</p>
+                    <span><span class="star">*</span>短信验证码</span>
+                    <div><input type="text" class="special">
+                    </div>
+                    <p>请查收手机短信，并填写短信中的验证码</p>
+                    <p><input type="checkbox" class="check" checked="checked">同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a><p><input type="submit" value="立即注册"></p>
+                </div>
+            </div>
+        </div>
+        <!--底部左结束-->
+        <!--底部右开始-->
+        <div class="aside">
+            <img src="img/reg_master.gif">
+        </div>
+        <!--底部右结束-->
+    </div>
+    <!--内容底部结束-->
+</div>
+<!--内容结束-->
+<!--底部开始-->
+<div class="footer">
+    <p>
+        <a href="#">关于网易</a>
+        <a href="#">关于网易免费邮</a>
+        <a href="#">邮箱官方博客</a>
+        <a href="#">客户服务</a>
+        <a href="#">隐私政策 </a>
+        <a href="#"></a>
+        |  网易公司版权所有 © 1997-2018</p>
+</div>
+</body>
+</html>
