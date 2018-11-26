@@ -5,12 +5,12 @@ window.onload = function () {
     var slider_main_img = slider_main.children;
     var slider_ctl = slider.children
 
-    var_iNOW = 0;
+    var iNOW = 0;
 //    2.动态创建指示器
     for(var i=0; i<slider_main_img.length;i++){
         var span = document.createElement("span");
         span.className = "slider-ctl-icon";
-        span.innerText =slider_main_img.length - i-1;
+        span.innerText = slider_main_img.length - i - 1;
         slider_ctl.insertBefore(span,slider_ctl.children[1]);
     }
 
