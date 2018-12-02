@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色变换</title>
+    <style>
+        div{
+            font-size: 50px;
+            font-family: "楷体";
+            color:black;
+        }
+        div{
+            text-align: center;
+            margin: 450px auto;}
+        @media screen and (min-width: 400px){
+            body{
+                background-color: green;
+            }
+            .r{display: none}
+            .b{display: none}
+            .p{display: none}
+            .y{display: none}
+        }
+        @media screen and (min-width: 700px){
+            body{
+                background-color: red;
+            }
+            .r{display: block}
+            .g{display: none}
+            .b{display: none}
+            .p{display: none}
+            .y{display: none}
+        }
+        @media screen and (min-width:1000px){
+            body{
+                background-color: blue;
+            }
+            .b{display: block}
+            .r{display: none}
+            .g{display: none}
+            .p{display: none}
+            .y{display: none}
+        }
+        @media screen and (min-width: 1200px){
+            body{
+                background-color: pink;
+            }
+            .p{display: block}
+            .r{display: none}
+            .b{display: none}
+            .g{display: none}
+            .y{display: none}
+        }
+        @media screen and (min-width: 1300px){
+            body{
+                background-color: yellow;
+            }
+            .y{display: block}
+            .r{display: none}
+            .b{display: none}
+            .p{display: none}
+            .g{display: none}
+        }
+    </style>
+</head>
+<body>
+<a href="开始.html#h1">返回</a>
+<div class="g"><input type="image" src="img/green.png" onclick="document.getElementById('green').play()">
+    <audio id="green" src="audio/green%20(V0).mp3" autoplay="autoplay"></audio>
+</div>
+<div class="r">
+    <input type="image" src="img/red.png" onclick="document.getElementById('red').play()">
+    <audio id="red" src="audio/red%20(V0).mp3" autoplay="autoplay"></audio>
+</div>
+<div class="b"><input type="image" src="img/blue.png" onclick="document.getElementById('blue').play()">
+    <audio id="blue" src="audio/blue%20(V0).mp3" autoplay="autoplay"></audio>
+</div>
+<div class="p"><input type="image" src="img/pink.png" onclick="document.getElementById('pink').play()">
+    <audio id="pink" src="audio/pink%20(V0).mp3" autoplay="autoplay"></audio>
+</div>
+<div class="y"><input type="image" src="img/yellow.png" onclick="document.getElementById('yellow').play()">
+    <audio id="yellow" src="audio/yellow%20(V0).mp3" autoplay="autoplay"></audio>
+</div>
+</body>
+</html>
