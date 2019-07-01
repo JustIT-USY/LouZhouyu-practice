@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图标切换</title>
+</head>
+<body>
+<img id="logo" src="img/logo.png" alt="无法显示" width="258">
+<script>
+    window.onload = function () {
+        //1.获取需要的标签
+        var logo = document.querySelector("#logo");
+        //2.绑定事件
+        logo.onmouseover = function () {
+            console.log("鼠标进入图片");
+            logo.src="img/微信图片_20190316210154.jpg";
+        }
+        logo.onmouseout = function () {
+            //console.log("鼠标离开");
+            logo.src="img/logo.png";
+        }
+        logo.onmousemove = function () {
+           // console.log("鼠标移动");
+        }
+    }
+</script>
+</body>
+</html>
