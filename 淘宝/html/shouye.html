@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝网</title>
+    <link rel="stylesheet" href="../css/shouye.css">
+</head>
+<body>
+    <!--顶部导航栏-->
+    <div class="wrapper">
+        <label>
+            <select>
+                <option>中国大陆</option>
+                <option>中国台湾</option>
+                <option>中国澳门</option>
+                <option>中国香港</option>
+            </select>
+        </label>
+        <a href="#" style="color: red">亲，请登录</a>
+        <a href="#">免费注册</a>
+        <a href="#">手机逛淘宝</a>
+        <ul style="float: right;">
+            <li><a href="#" class="wrapper-x">网站导航</a></li>
+        </ul>
+        <ul style="float: right;">
+            <li><a href="#" class="wrapper-x">联系客服</a></li>
+            <li><a href="#" class="wrapper-x">消费者客服</a></li>
+            <li><a href="#" class="wrapper-x">卖家客服</a></li>
+        </ul>
+        <ul style="float: right;">
+            <li><a href="#" class="wrapper-x">千牛卖家中心</a></li>
+            <li><a href="#" class="wrapper-h">免费开店</a></li>
+            <li><a href="#" class="wrapper-h">已卖出的宝贝</a></li>
+            <li><a href="#" class="wrapper-h">出售中的宝贝</a></li>
+            <li><a href="#" class="wrapper-h">卖家服务市场</a></li>
+            <li><a href="#" class="wrapper-h">卖家培训中心</a></li>
+            <li><a href="#" class="wrapper-h">体检中心</a></li>
+            <li><a href="#" class="wrapper-h">问商友</a></li>
+        </ul>
+        <ul style="float: right;">
+            <li><a href="#" class="wrapper-x">商品分类</a></li>
+        </ul>
+        <ul style="float: right;">
+            <li><a href="#" class="wrapper-x">收藏夹</a></li>
+            <li><a href="#" class="wrapper-h">收藏的宝贝</a></li>
+            <li><a href="#" class="wrapper-h">收藏的店铺</a></li>
+        </ul>
+        <ul style="float: right;">
+            <li><a href="#" class="wrapper-x">购物车</a></li>
+        </ul>
+        <ul style="float: right;">
+            <li><a href="#" id="wrapper-x">我的淘宝</a></li>
+            <li><a href="#" class="wrapper-h">已买的宝贝</a></li>
+            <li><a href="#" class="wrapper-h">我的足迹</a></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function () {
+            var wrapper_x = document.querySelector("#wrapper-x")
+            var wrapper_h = document.querySelector(".wrapper-h")
+            wrapper_x.onmouseover = function () {
+                wrapper_h.style.display = 'block';
+            }
+            wrapper_x.onmouseout = function () {
+                wrapper_h.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
