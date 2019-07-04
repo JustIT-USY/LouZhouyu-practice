@@ -8,14 +8,43 @@ a{
 ul{
     list-style: none;
 }
-.wrapper{
-    background-color: rgb(245,245,245);
-    width: 1859px;
-    height: 36px;
+body{
+    text-align: center;
 }
-.wrapper ul{
+.top_header{
+    width: 1800px;
+    height: 36px;
+    color: #ccc;
+    margin: 0 auto;
+}
+.top_header_left{
+    float: left;
+    position:relative;
+}
+.top_header_left ul li{
+    float: left;
     margin: 5px;
 }
-.wrapper-h{
-    display: none;
+.ChooseArea{
+    color: black;
 }
+.ChooseArea ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 250px;
+    height: 270px;
+    overflow: auto;
+    border-left: #f5f5f5 1px solid;
+    border-bottom: #f5f5f5 1px solid;
+    text-align: left;
+    font: 12px/30px Tahoma;
+}
+.ChooseArea ul li{
+    float: none;
+}
+.ChooseArea ul li:hover{
+    background-color: #f5f5f5;}
+.ChooseArea:hover{
+    background-color: #fff;}

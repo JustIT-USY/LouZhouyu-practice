@@ -7,64 +7,64 @@
 </head>
 <body>
     <!--顶部导航栏-->
-    <div class="wrapper">
-        <label>
-            <select>
-                <option>中国大陆</option>
-                <option>中国台湾</option>
-                <option>中国澳门</option>
-                <option>中国香港</option>
-            </select>
-        </label>
-        <a href="#" style="color: red">亲，请登录</a>
-        <a href="#">免费注册</a>
-        <a href="#">手机逛淘宝</a>
-        <ul style="float: right;">
-            <li><a href="#" class="wrapper-x">网站导航</a></li>
-        </ul>
-        <ul style="float: right;">
-            <li><a href="#" class="wrapper-x">联系客服</a></li>
-            <li><a href="#" class="wrapper-x">消费者客服</a></li>
-            <li><a href="#" class="wrapper-x">卖家客服</a></li>
-        </ul>
-        <ul style="float: right;">
-            <li><a href="#" class="wrapper-x">千牛卖家中心</a></li>
-            <li><a href="#" class="wrapper-h">免费开店</a></li>
-            <li><a href="#" class="wrapper-h">已卖出的宝贝</a></li>
-            <li><a href="#" class="wrapper-h">出售中的宝贝</a></li>
-            <li><a href="#" class="wrapper-h">卖家服务市场</a></li>
-            <li><a href="#" class="wrapper-h">卖家培训中心</a></li>
-            <li><a href="#" class="wrapper-h">体检中心</a></li>
-            <li><a href="#" class="wrapper-h">问商友</a></li>
-        </ul>
-        <ul style="float: right;">
-            <li><a href="#" class="wrapper-x">商品分类</a></li>
-        </ul>
-        <ul style="float: right;">
-            <li><a href="#" class="wrapper-x">收藏夹</a></li>
-            <li><a href="#" class="wrapper-h">收藏的宝贝</a></li>
-            <li><a href="#" class="wrapper-h">收藏的店铺</a></li>
-        </ul>
-        <ul style="float: right;">
-            <li><a href="#" class="wrapper-x">购物车</a></li>
-        </ul>
-        <ul style="float: right;">
-            <li><a href="#" id="wrapper-x">我的淘宝</a></li>
-            <li><a href="#" class="wrapper-h">已买的宝贝</a></li>
-            <li><a href="#" class="wrapper-h">我的足迹</a></li>
-        </ul>
+<div class="top_header">
+    <!--内容宽度？？？-->
+    <div class="common" style="width: 1300px;height: 36px;color: #ccc;margin: 0 auto;">
+        <!--左边-->
+        <div class="top_header_left">
+            <ul>
+                <li class="ChooseArea">
+                    <span class="area">中国大陆</span>
+                    <ul class="ChooseArea_xiala">
+                        <li>中国台湾</li>
+                        <li>中国香港</li>
+                        <li>中国澳门</li>
+                        <li>美国</li>
+                        <li>日本</li>
+                        <li>韩国</li>
+                        <li>加拿大</li>
+                        <li>英国</li>
+                        <li>法国</li>
+                        <li>德国</li>
+                        <li>意大利</li>
+                        <li>墨西哥</li>
+                    </ul>
+                </li>
+                <li><a href="#" style="color: red">亲，请登录</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">手机逛淘宝</a></li>
+            </ul>
+        </div>
+        <!--右边-->
+        <div class="top_header_right" style="float: right;position: relative">
+            <ul>
+                <li class="MyTerasure">
+                    我的淘宝
+                    <ul>
+                        <li>已买的宝贝</li>
+                        <li>我的足迹</li>
+                    </ul>
+                </li>
+                <li class="ShopCar"></li>
+                <li class="collection"></li>
+                <li><a href="#">商品分类</a></li>
+                <li class="seller"></li>
+                <li class="contact"></li>
+                <li class="MainNav"></li>
+            </ul>
+        </div>
     </div>
+    <script src="../js/myFunc.js"></script>
     <script>
         window.onload = function () {
-            var wrapper_x = document.querySelector("#wrapper-x")
-            var wrapper_h = document.querySelector(".wrapper-h")
-            wrapper_x.onmouseover = function () {
-                wrapper_h.style.display = 'block';
-            }
-            wrapper_x.onmouseout = function () {
-                wrapper_h.style.display = 'none';
+            var Area = $("ChooseArea");
+            var xiala = $("ChooseArea_xiala");
+            Area.onmouseover = function () {
+                show(xiala);
+                //ChooseArea.children("ul").style.display = "block";
             }
         }
     </script>
+</div>
 </body>
 </html>
