@@ -3,6 +3,7 @@
     padding: 0;
 }
 a{
+    color: black;
     text-decoration: none;
 }
 ul{
@@ -11,12 +12,18 @@ ul{
 body{
     text-align: center;
 }
+/*顶部导航栏*/
 .top_header{
     width: 1800px;
     height: 36px;
-    color: #ccc;
+    background-color: #ccc;
     margin: 0 auto;
 }
+.common{
+    width: 1300px;
+    height: 36px;
+    margin: 0 auto;}
+/*导航栏左边*/
 .top_header_left{
     float: left;
     position:relative;
@@ -25,15 +32,18 @@ body{
     float: left;
     margin: 5px;
 }
+/*选择地区*/
+.Area_xiala{
+    display: none;
+}
 .ChooseArea{
     color: black;
 }
 .ChooseArea ul{
-    display: none;
     position: absolute;
     left: 0;
     top: 35px;
-    width: 250px;
+    width: 150px;
     height: 270px;
     overflow: auto;
     border-left: #f5f5f5 1px solid;
@@ -48,3 +58,39 @@ body{
     background-color: #f5f5f5;}
 .ChooseArea:hover{
     background-color: #fff;}
+/*导航栏右边*/
+.top_header_right{
+    float: right;
+    position: relative;}
+.top_header_right ul li{
+    float: left;
+    margin: 5px;
+}
+/*我的淘宝*/
+#Mytaobao-2 ul{
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+#Mytaobao-2 ul li{
+    float: none;
+    background-color: #fff;
+}
+#Mytaobao-2 :hover{
+    background-color: #fff;
+}
+#Mytaobao-2 ul li a:hover{
+    background-color: #f5f5f5;
+}
+/*购物车*/
+#shopcar-1{
+    font-size: 12px;
+    position: absolute;
+    top: 35px;
+    width: 300px;
+}
+/*收藏夹*/
+#collection{
+
+}
+

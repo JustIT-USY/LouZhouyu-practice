@@ -9,26 +9,28 @@
     <!--顶部导航栏-->
 <div class="top_header">
     <!--内容宽度？？？-->
-    <div class="common" style="width: 1300px;height: 36px;color: #ccc;margin: 0 auto;">
+    <div class="common">
         <!--左边-->
         <div class="top_header_left">
             <ul>
                 <li class="ChooseArea">
-                    <span class="area">中国大陆</span>
-                    <ul class="ChooseArea_xiala">
-                        <li>中国台湾</li>
-                        <li>中国香港</li>
-                        <li>中国澳门</li>
-                        <li>美国</li>
-                        <li>日本</li>
-                        <li>韩国</li>
-                        <li>加拿大</li>
-                        <li>英国</li>
-                        <li>法国</li>
-                        <li>德国</li>
-                        <li>意大利</li>
-                        <li>墨西哥</li>
-                    </ul>
+                    <div id="Area">中国大陆</div>
+                    <div id="xiala">
+                        <ul>
+                            <li>中国台湾</li>
+                            <li>中国香港</li>
+                            <li>中国澳门</li>
+                            <li>美国</li>
+                            <li>日本</li>
+                            <li>韩国</li>
+                            <li>加拿大</li>
+                            <li>英国</li>
+                            <li>法国</li>
+                            <li>德国</li>
+                            <li>意大利</li>
+                            <li>墨西哥</li>
+                        </ul>
+                    </div>
                 </li>
                 <li><a href="#" style="color: red">亲，请登录</a></li>
                 <li><a href="#">免费注册</a></li>
@@ -36,17 +38,32 @@
             </ul>
         </div>
         <!--右边-->
-        <div class="top_header_right" style="float: right;position: relative">
+        <div class="top_header_right">
             <ul>
-                <li class="MyTerasure">
-                    我的淘宝
-                    <ul>
-                        <li>已买的宝贝</li>
-                        <li>我的足迹</li>
-                    </ul>
+                <li id="Mytaobao-0">
+                    <div id="Mytaobao-1"><a href="#">我的淘宝</a></div>
+                    <div id="Mytaobao-2">
+                        <ul>
+                            <li><a href="#">已买的宝贝</a></li>
+                            <li><a href="#">我的足迹</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="ShopCar"></li>
-                <li class="collection"></li>
+                <li>
+                    <div id="ShopCar">购物车</div>
+                    <div id="shopcar-1">您的购物车里还没有任何宝贝。
+                        <button>查看我的购物车</button>
+                    </div>
+                </li>
+                <li>
+                    <div id="collection">收藏夹</div>
+                    <div id="collection-1">
+                        <ul>
+                            <li><a href="#">收藏的宝贝</a></li>
+                            <li><a href="#">收藏的店铺</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="#">商品分类</a></li>
                 <li class="seller"></li>
                 <li class="contact"></li>
@@ -55,16 +72,8 @@
         </div>
     </div>
     <script src="../js/myFunc.js"></script>
-    <script>
-        window.onload = function () {
-            var Area = $("ChooseArea");
-            var xiala = $("ChooseArea_xiala");
-            Area.onmouseover = function () {
-                show(xiala);
-                //ChooseArea.children("ul").style.display = "block";
-            }
-        }
-    </script>
+    <script src="../js/shouye.js"></script>
+
 </div>
 </body>
 </html>

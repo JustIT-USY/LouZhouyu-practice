@@ -1,10 +1,10 @@
-/*function $(id) {
+function $(id) {
     return typeof id === "string" ? document.getElementById(id) : null;
 }
-*/
-function $(clas) {
-    return typeof clas === "string" ? document.getElementsByClassName(clas) : null;
-}
+
+//function $(clas) {
+  //  return typeof clas === "string" ? document.getElementsByClassName(clas) : null;
+//}
 function show(obj) {
     return obj.style.display = 'block';
 }
