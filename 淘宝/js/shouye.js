@@ -25,10 +25,21 @@ window.onload = function () {
     var shopcar = $('ShopCar');
     var shopcar_1 = $('shopcar-1');
     hide(shopcar_1);
-    shopcar.onmouseover = function () {
+    shopcar.onmouseenter = function () {
         show(shopcar_1);
     };
-    shopcar_1.onmouseleave = function () {
+    shopcar_1.onmouseout = function () {
         hide(shopcar_1)
+    };
+
+    //1.4收藏夹
+    var collection = $('collection');
+    var collection_1 = $('collection-1');
+    hide(collection_1);
+    collection.onmouseover = function () {
+        show(collection_1);
+    };
+    collection_1.onmouseleave = function () {
+        hide(collection_1);
     };
 };
