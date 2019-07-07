@@ -42,4 +42,30 @@ window.onload = function () {
     collection_1.onmouseleave = function () {
         hide(collection_1);
     };
+    //2.1天猫 淘宝 店铺
+    var searchTab_0 = $('searchTab_0');
+    var searchTab_1 = $('searchTab_1');
+    var searchTab_2 = $('searchTab_2');
+    searchTab_1.onclick =function () {
+        searchTab_1.className = 'searchTab';
+        searchTab_0.className = 'searchTab_1';
+        searchTab_2.className = 'searchTab_1';
+    };
+    searchTab_0.onclick =function () {
+        searchTab_0.className = 'searchTab';
+        searchTab_1.className = 'searchTab_1';
+        searchTab_2.className = 'searchTab_1';
+    };
+    searchTab_2.onclick =function () {
+        searchTab_2.className = 'searchTab';
+        searchTab_0.className = 'searchTab_1';
+        searchTab_1.className = 'searchTab_1';
+    };
+    //2.3关闭二维码
+    var guanbi = $('guanbiEWM');
+    var EWM_logo = $('sjTB_logo');
+    guanbi.onclick = function () {
+        hide(guanbi);
+        hide(EWM_logo);
+    }
 };

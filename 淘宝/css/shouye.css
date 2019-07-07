@@ -118,10 +118,11 @@ ul{
     height: 121px;
 }
 .top_logo{
+    margin-left: 23px;
     float: right;
     position: absolute;
     width: 190px;
-    height: 88px;
+    height: 58px;
 }
 .top_logo img{
     height: 100%;
@@ -130,9 +131,83 @@ ul{
     margin: 0 auto;
     width: 630px;
     height: 87px;
-    background-color: red;
 }
-.sjTB_logo{
+.top_sousuokuang_s{
+    width: 630px;
+    height: 62px;
+}
+#sousuokuang_s li{
+    cursor: pointer;
+    float: left;
+    margin-left: 10px;
+}
+.searchTab{
+    font-weight: 700;
+    font-size: 14px;
+    width: 36px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    color: #FFF;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.searchTab_1{
+    font-size: 14px;
+    width: 36px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    color: red;
+}
+#sousuokuang_s ul li:hover{
+    background-color: rgb(255,238,229);
+}
+#sousuokuang_x{
+    border: #ff9000 solid 2px;
+    border-radius: 20px;
+    top: 22px;
+    position: relative;
+    width: 630px;
+    height: 40px;
+}
+.top_sousuokuang_x{
+    position: relative;
+    top: 2px;
+    width: 630px;
+    height: 25px;
+}
+.search-input{
+
+    width: 556px;
+    height: 40px;
+}
+.search-button{
+    line-height: 40px;
+    float: right;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    z-index: 100;
+    width: 75px;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.search-button button{
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFF;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    cursor: pointer;
+    height: 100%;
+    border: none;
+    width: 100%;
+}
+#sjTB_logo{
     position: relative;
     left: -75px;
     top: -90px;
@@ -144,10 +219,56 @@ ul{
     font-size: 12px;
     color: orangered;
 }
+#guanbiEWM{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #eee;
+}
+#guanbiEWM img{
+    width: 100%;
+}
 .dafenlei{
     width: 100%;
     height: 30px;
     background-color: rgb(255,140,0);
+}
+.dafenlei_1{
+    margin: 0 auto;
+    width: 1190px;
+    height: 30px;
+}
+.dafenlei_1 h2{
+    line-height: 30pxd;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: rgb(255,80,0);
+    text-align: center;
+    width: 190px;
+    height: 30px;
+    float: left;}
+.defenlei_b{
+    width: 218.81px;
+    height: 30px;
+}
+.defenlei_m{
+    width: 354.3px;
+    height: 30px;
+}
+.defenlei_a{
+    width: 234.64px;
+    height: 30px;
+}
+.dafenlei_1 ul li{
+    color: #fff;
+    font-weight: 700;
+    padding: 0 5px;
+    line-height: 30px;
+    float: left;
 }
 
 
