@@ -67,5 +67,23 @@ window.onload = function () {
     guanbi.onclick = function () {
         hide(guanbi);
         hide(EWM_logo);
+    };
+
+    //3.2旺旺背景图
+    var dafenlei_1 = $('dafenlei_1');
+    var wangwang = dafenlei_1.children[1];
+    var ul = dafenlei_1.children[2];
+    var allLis = ul.children;
+    hide(wangwang);
+    for(var i=0;i<allLis.length;i++){
+        var li = allLis[i];
+        li.onmouseover = function () {
+            var offsetLeft = this.offsetLeft;
+            wangwang.style.left = (offsetLeft + 5) + 'px';
+            show(wangwang);
+        };
+        li.onmouseout = function () {
+            hide(wangwang);
+        }
     }
 };
