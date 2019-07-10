@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/shouye.css">
+<style>
+        #main_top_m_x{overflow: hidden;
+            margin: 0 auto;
+            width: 520px;
+            height: 230px;
+            position: relative;
+        }
+        #main_top_m_x img{
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            vertical-align: top;
+        }
+        #main_top_m_x ul{
+            width: 3640px;
+            height: 230px;
+            position: absolute;
+            left: 0;
+            top: 30px;
+        }
+        #main_top_m_x ul li{
+            width: 520px;
+            height: 230px;
+            float: left;
+        }
+        #main_top_m_x_bottom{
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+         }
+        #main_top_m_x ol{
+            position: absolute;
+            border-radius: 10px;
+            top: 25px;
+            text-align: center;
+            font-size: 0;
+        }
+        #main_top_m_x ol li{
+            width: 86px;
+            height: 3px;
+            background-color: red;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #main_top_m_x ol li.lbt_current{
+            background-color: black;
+        }
+        .lbt_jiantou_l{
+            position: absolute;
+            top: 100px;
+            float: left;
+            width: 20px;
+            height: 30px;
+            background: url("../img/zjiantou.png") no-repeat;
+            background-position: 0 7px;
+            background-color: rgba(0,0,0,.3);
+            border-top-right-radius:15px;
+            border-bottom-right-radius:15px;
+            display: none;
+            cursor: pointer;
+        }
+        .lbt_jiantou_r{
+            cursor: pointer;
+            display: none;
+            background: url("../img/yjiantou.png") no-repeat;
+            background-position: 5px 7px;
+            position: absolute;
+            right: 0;
+            top: 100px;
+            float: right;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0,0,0,.3);
+            border-top-left-radius:15px;
+            border-bottom-left-radius:15px;
+        }
+</style>
+</head>
+<body>
+<div id="main_top_m_x">
+    <div id="main_top_m_x_bottom">
+        <div style="width: 520px;height: 18px;">理想生活上天猫
+            <span id="lbt_span" style="float: right;">1/6</span>
+        </div>
+        <ul id="lbt_ulul">
+            <li><a href="#"><img src="../img/lbt1.jpg" alt=""><img src="../img/lbt2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../img/lbt5.jpg" alt=""><img src="../img/lbt4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../img/lbt5.jpg" alt=""><img src="../img/lbt6.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../img/lbt7.jpg" alt=""><img src="../img/lbt8.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../img/lbt9.jpg" alt=""><img src="../img/lbt10.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../img/lbt7.jpg" alt=""><img src="../img/lbt12.jpg" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="lbt_jiantou_l"></div>
+    <div class="lbt_jiantou_r"></div>
+    <ol id="lbt_olol">
+        <li class="lbt_current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+
+<script src="../js/myFunc.js"></script>
+<script>
+    window.onload =function () {
+        //1.获取标签
+        var lbt_lis = $('lbt_ulul').children;
+        var lbt_currentIndex =0,lbt_indicatorIndex =0;
+        var left_jiantou = $('main_top_m_x').children[1];
+        var right_jiantou = $('main_top_m_x').children[2];
+        var span = $('lbt_span');
+        //2.克隆li标签
+        $('lbt_ulul').appendChild(lbt_lis[0].cloneNode(true));
+        //3.动态创建页码
+        for(i=0;i<lbt_lis.length;i++){
+            var lbt_li = document.createElement('li')
+        }
+        //4.第一个选中
+        $('lbt_olol').children[0].className = 'lbt_current';
+
+        //5.监听鼠标进入圆点
+        var lbt_olLis = $('lbt_olol').children;
+        for( j=0;j<lbt_olLis.length;j++){
+            (function (j) {
+                //5.1获取单独的li标签
+                var lbt_li =lbt_olLis[j];
+                //5.2鼠标进入
+                lbt_li.onmouseover = function () {
+                    for(i=0;i<lbt_olLis.length;i++){
+                        lbt_olLis[i].className = '';
+                    }
+                    this.className = "lbt_current";
+                    //5.3动起来
+                    constant($('lbt_ulul'),-(520 * j),60);
+                    lbt_currentIndex = lbt_indicatorIndex= j;
+                }
+            })(j)
+        }
+        //6.自动轮播
+        var lbt_timer = setInterval(autoPlay,1000);
+
+        //7.清除和设置定时器
+        $('main_top_m_x').onmouseover = function () {
+            clearInterval(lbt_timer);
+            show(right_jiantou);
+            show(left_jiantou)
+        };
+        $('main_top_m_x').onmouseout = function () {
+            hide(left_jiantou);
+            hide(right_jiantou);
+            lbt_timer = setInterval(autoPlay,1000);
+        };
+        //8.点击箭头
+        left_jiantou.onclick = function () {
+            lbt_currentIndex--;
+            if(lbt_currentIndex  < 0){
+                $('lbt_ulul').style.left = 3640;
+                lbt_currentIndex = 4;
+            }
+            constant($('lbt_ulul'),-lbt_currentIndex * 520,100);
+            //圆点滚动
+            lbt_indicatorIndex--;
+            if(lbt_indicatorIndex < 0){
+                lbt_indicatorIndex = 5;
+            }
+            for(var i=0;i<lbt_olLis.length;i++){
+                lbt_olLis[i].className = '';
+            }
+            lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
+        };
+        right_jiantou.onclick = function () {
+            //图片滚动
+            lbt_currentIndex++;
+            if(lbt_currentIndex > lbt_lis.length - 1){
+                $('lbt_ulul').style.left = 0;
+                lbt_currentIndex = 1;
+            }
+            constant($('lbt_ulul'),-lbt_currentIndex * 520,100);
+            //圆点滚动
+            lbt_indicatorIndex++;
+            if(lbt_indicatorIndex > lbt_olLis.length - 1){
+                lbt_indicatorIndex = 0;
+            }
+            for(var i=0;i<lbt_olLis.length;i++){
+                lbt_olLis[i].className = '';
+            }
+            lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
+        };
+
+        function autoPlay () {
+            //6.1 ul滚起来
+            lbt_currentIndex++;
+            if(lbt_currentIndex > lbt_lis.length - 1){
+                $('lbt_ulul').style.left = 0;
+                lbt_currentIndex = 1;
+            }
+            constant($('lbt_ulul'),-lbt_currentIndex * 520,100);
+            //6.2指示器滚起来
+            lbt_indicatorIndex++;
+            if(lbt_indicatorIndex > lbt_olLis.length - 1){
+                lbt_indicatorIndex = 0;
+            }
+            for(var i=0;i<lbt_olLis.length;i++){
+                lbt_olLis[i].className = '';
+            }
+            lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
+            $('lbt_span').innerHTML = (lbt_indicatorIndex+1) + '/6' ;
+        }
+    }
+</script>
+</body>
+</html>

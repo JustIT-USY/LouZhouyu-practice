@@ -57,13 +57,21 @@ function  client() {
 * {number}target
 * {number}speed
 */
-function constant(ele,target,speed) {
+function constant(obj,target,speed) {
     //1.清除定时器
-    clearInterval(ele.timer);
-    //2.设置定时器
-    ele.timer = setInterval(function () {
-        box.style.l
-    })
+    clearInterval(obj.timer);
+
+    //2.判断方向
+    var dir = obj.offsetLeft < target ? speed : -speed;
+
+    //3.设置定时器
+    obj.timer = setInterval(function () {
+        obj.style.left = obj.offsetLeft + dir +'px';
+        if(Math.abs(target - obj.offsetLeft)<Math.abs(dir)){
+            clearInterval(obj.timer);
+            obj.style.left = target + 'px';
+        }
+    },20)
 }
 
 /*
@@ -83,7 +91,7 @@ function buffer(obj,target){
         obj.style.left = obj.offsetLeft + speed + 'px';
         obj.innerHTML = obj.offsetLeft;
         //2.3清除定时器
-        if(obj.offsetLeft == target){
+        if(obj.offsetLeft === target){
             clearInterval(obj.timer);
         }
     })

@@ -111,26 +111,249 @@ window.onload = function () {
         }
     }
 
+    //4.2
+    //1.获取标签
+    var lis = $('Lbt_ul').children;
+    var currentIndex =0,indicatorIndex =0;
+    var left_jiantou = $('main_top_m_s').children[1];
+    var right_jiantou = $('main_top_m_s').children[2];
+    //2.克隆li标签
+    $('Lbt_ul').appendChild(lis[0].cloneNode(true));
+    //3.动态创建页码
+    for(i=0;i<lis.length;i++){
+        var Lbt_li = document.createElement('li')
+    }
+    //4.第一个选中
+    $('Lbt_ol').children[0].className = 'Lbt_current';
+
+    //5.监听鼠标进入圆点
+    var olLis = $('Lbt_ol').children;
+    for(var j=0;j<olLis.length;j++){
+        (function (j) {
+            //5.1获取单独的li标签
+            var Lbt_li =olLis[j];
+            //5.2鼠标进入
+            Lbt_li.onmouseover = function () {
+                for(var i=0;i<olLis.length;i++){
+                    olLis[i].className = '';
+                }
+                this.className = "Lbt_current";
+                //5.3动起来
+                constant($('Lbt_ul'),-(520 * j),60);
+                currentIndex =indicatorIndex= j;
+            }
+        })(j)
+    }
+    //6.自动轮播
+    var timer = setInterval(autoPlay,1000);
+
+    //7.清除和设置定时器
+    $('main_top_m_s').onmouseover = function () {
+        clearInterval(timer);
+        show(right_jiantou);
+        show(left_jiantou)
+    };
+    $('main_top_m_s').onmouseout = function () {
+        hide(left_jiantou);
+        hide(right_jiantou);
+        timer = setInterval(autoPlay,1000);
+    };
+    //8.点击箭头
+    left_jiantou.onclick = function () {
+        currentIndex--;
+        if(currentIndex  < 0){
+            $('Lbt_ul').style.left = 3120;
+            currentIndex = 4;
+        }
+        constant($('Lbt_ul'),-currentIndex * 520,100);
+        //圆点滚动
+        indicatorIndex--;
+        if(indicatorIndex < 0){
+            indicatorIndex = 4;
+        }
+        for(var i=0;i<olLis.length;i++){
+            olLis[i].className = '';
+        }
+        olLis[indicatorIndex].className = "Lbt_current";
+    };
+    right_jiantou.onclick = function () {
+        //图片滚动
+        currentIndex++;
+        if(currentIndex > lis.length - 1){
+            $('Lbt_ul').style.left = 0;
+            currentIndex = 1;
+        }
+        constant($('Lbt_ul'),-currentIndex * 520,100);
+        //圆点滚动
+        indicatorIndex++;
+        if(indicatorIndex > olLis.length - 1){
+            indicatorIndex = 0;
+        }
+        for(var i=0;i<olLis.length;i++){
+            olLis[i].className = '';
+        }
+        olLis[indicatorIndex].className = "Lbt_current";
+    };
+
+    function autoPlay () {
+        //6.1 ul滚起来
+        currentIndex++;
+        if(currentIndex > lis.length - 1){
+            $('Lbt_ul').style.left = 0;
+            currentIndex = 1;
+        }
+        constant($('Lbt_ul'),-currentIndex * 520,100);
+        //6.2指示器滚起来
+        indicatorIndex++;
+        if(indicatorIndex > olLis.length - 1){
+            indicatorIndex = 0;
+        }
+        for(var i=0;i<olLis.length;i++){
+            olLis[i].className = '';
+        }
+        olLis[indicatorIndex].className = "Lbt_current";
+    }
+
+
+    //4.3
+    //1.获取标签
+    var lbt_lis = $('lbt_ulul').children;
+    var lbt_currentIndex =0,lbt_indicatorIndex =0;
+    var left_jiantou_1 = $('main_top_m_x').children[1];
+    var right_jiantou_1 = $('main_top_m_x').children[2];
+    var span = $('lbt_span');
+    //2.克隆li标签
+    $('lbt_ulul').appendChild(lbt_lis[0].cloneNode(true));
+    //3.动态创建页码
+    for(i=0;i<lbt_lis.length;i++){
+        var lbt_li = document.createElement('li')
+    }
+    //4.第一个选中
+    $('lbt_olol').children[0].className = 'lbt_current';
+
+    //5.监听鼠标进入圆点
+    var lbt_olLis = $('lbt_olol').children;
+    for( j=0;j<lbt_olLis.length;j++){
+        (function (j) {
+            //5.1获取单独的li标签
+            var lbt_li =lbt_olLis[j];
+            //5.2鼠标进入
+            lbt_li.onmouseover = function () {
+                for(i=0;i<lbt_olLis.length;i++){
+                    lbt_olLis[i].className = '';
+                }
+                this.className = "lbt_current";
+                //5.3动起来
+                constant($('lbt_ulul'),-(520 * j),60);
+                lbt_currentIndex = lbt_indicatorIndex= j;
+                $('lbt_span').innerHTML = (lbt_indicatorIndex+1) + '/6' ;
+            }
+        })(j)
+    }
+    //6.自动轮播
+    var lbt_timer = setInterval(AutoPlay,1000);
+
+    //7.清除和设置定时器
+    $('main_top_m_x').onmouseover = function () {
+        clearInterval(lbt_timer);
+        show(right_jiantou_1);
+        show(left_jiantou_1)
+    };
+    $('main_top_m_x').onmouseout = function () {
+        hide(left_jiantou_1);
+        hide(right_jiantou_1);
+        lbt_timer = setInterval(AutoPlay,1000);
+    };
+    //8.点击箭头
+    left_jiantou_1.onclick = function () {
+        lbt_currentIndex--;
+        if(lbt_currentIndex  < 0){
+            $('lbt_ulul').style.left = 3640;
+            lbt_currentIndex = 4;
+        }
+        constant($('lbt_ulul'),-lbt_currentIndex * 520,100);
+        //圆点滚动
+        lbt_indicatorIndex--;
+        if(lbt_indicatorIndex < 0){
+            lbt_indicatorIndex = 5;
+        }
+        for(var i=0;i<lbt_olLis.length;i++){
+            lbt_olLis[i].className = '';
+        }
+        lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
+        $('lbt_span').innerHTML = (lbt_indicatorIndex+1) + '/6' ;
+    };
+    right_jiantou_1.onclick = function () {
+        //图片滚动
+        lbt_currentIndex++;
+        if(lbt_currentIndex > lbt_lis.length - 1){
+            $('lbt_ulul').style.left = 0;
+            lbt_currentIndex = 1;
+        }
+        constant($('lbt_ulul'),-lbt_currentIndex * 520,100);
+        //圆点滚动
+        lbt_indicatorIndex++;
+        if(lbt_indicatorIndex > lbt_olLis.length - 1){
+            lbt_indicatorIndex = 0;
+        }
+        for(var i=0;i<lbt_olLis.length;i++){
+            lbt_olLis[i].className = '';
+        }
+        lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
+        $('lbt_span').innerHTML = (lbt_indicatorIndex+1) + '/6' ;
+    };
+
+    function AutoPlay () {
+        //6.1 ul滚起来
+        lbt_currentIndex++;
+        if(lbt_currentIndex > lbt_lis.length - 1){
+            $('lbt_ulul').style.left = 0;
+            lbt_currentIndex = 1;
+        }
+        constant($('lbt_ulul'),-lbt_currentIndex * 520,100);
+        //6.2指示器滚起来
+        lbt_indicatorIndex++;
+        if(lbt_indicatorIndex > lbt_olLis.length - 1){
+            lbt_indicatorIndex = 0;
+        }
+        for(var i=0;i<lbt_olLis.length;i++){
+            lbt_olLis[i].className = '';
+        }
+        lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
+        $('lbt_span').innerHTML = (lbt_indicatorIndex+1) + '/6' ;
+    }
+
+
     //4.1主题市场
     var left_ul = $('main_top_ul_1');
     var left_ul_allLis = left_ul.children;
     var right_ul = $('ul_right');
     var right_ul_allLis = right_ul.children;
+    var main_top_m = $('main_top').children[2];
+    var main_top_r = $('main_top').children[3];
     for (i=0;i<left_ul_allLis.length;i++){
-        var ul_li = left_ul_allLis[i];
         (function(i){
+            var ul_li = left_ul_allLis[i];
             var ul_block = right_ul_allLis[i].children[0];
-            ul_li.onmouseover = function () {
+            ul_li.onmouseover = function () {show(ul_block);
+                hide(main_top_m);
+                hide(main_top_r);
                 show(ul_block);
             };
             ul_block.onmouseover = function(){
-                show(ul_block)
+                hide(main_top_m);
+                hide(main_top_r);
+                show(ul_block);
             };
             ul_li.onmouseout =function(){
-              hide(ul_block)  ;
+              hide(ul_block);
+              show(main_top_m);
+              show(main_top_r);
             };
             ul_block.onmouseout = function () {
                 hide(ul_block);
+                show(main_top_m);
+                show(main_top_r);
             }
         })(i);
     }
