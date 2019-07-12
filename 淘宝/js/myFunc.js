@@ -74,6 +74,23 @@ function constant(obj,target,speed) {
     },20)
 }
 
+function constant1(obj,target,speed) {
+    //1.清除定时器
+    clearInterval(obj.timer);
+
+    //2.判断方向
+    var dir = obj.offsetTop < target ? speed : -speed;
+
+    //3.设置定时器
+    obj.timer = setInterval(function () {
+        obj.style.top = obj.offsetTop + dir +'px';
+        if(Math.abs(target - obj.offsetTop)<Math.abs(dir)){
+            clearInterval(obj.timer);
+            obj.style.top = target + 'px';
+        }
+    },20)
+}
+
 /*
 缓动动画
 原理：盒子本身的位置 + 步长（不断变化的，由大变小）

@@ -322,8 +322,51 @@ window.onload = function () {
         lbt_olLis[lbt_indicatorIndex].className = "lbt_current";
         $('lbt_span').innerHTML = (lbt_indicatorIndex+1) + '/6' ;
     }
+    //4.3
+    //1.获取标签
+    var tbtt_lis = $('tbtt_ul').children;
+    var tbtt_currentIndex =0,tbtt_indicatorIndex =0;
+    //2.克隆li标签
+    $('tbtt_ul').appendChild(tbtt_lis[0].cloneNode(true));
+    //3.动态创建页码
+    for(i=0;i<tbtt_lis.length;i++){
+        var tbtt_li = document.createElement('li')
+    }
+    //6.自动轮播
+    var tbtt_timer = setInterval(Tbtt_autoPlay,1000);
 
+    //7.清除和设置定时器
+    $('main_bottom').onmouseover = function () {
+        clearInterval(tbtt_timer);
+    };
+    $('main_bottom').onmouseout = function () {
+        tbtt_timer = setInterval(Tbtt_autoPlay,1000);
+    };
 
+    function Tbtt_autoPlay () {
+        //6.1 ul滚起来
+        tbtt_indicatorIndex++;
+        if (tbtt_indicatorIndex > tbtt_lis.length - 1) {
+            $('tbtt_ul').style.top = 0;
+            tbtt_indicatorIndex = 1;
+        }
+        constant1($('tbtt_ul'), -tbtt_indicatorIndex * 73, 10);
+    }
+    //4.4
+    var main_right_ul_1 = $('main_right_ul').children[0];
+    var main_right_ul_1_lis = main_right_ul_1.children;
+    var main_right_ul_2 = $('main_right_ul_2').children;
+    var vas = $('main_right_ul_2_1');
+    for(i=0;i<main_right_ul_1.length;i++){
+        (function () {
+            var li = main_right_ul_1_lis[i];
+            var li_1 = main_right_ul_2[i];
+            li.onmouseover = function () {
+               alert('00')
+            }
+        })(i);
+
+    }
     //4.1主题市场
     var left_ul = $('main_top_ul_1');
     var left_ul_allLis = left_ul.children;
@@ -332,10 +375,10 @@ window.onload = function () {
     var main_top_m = $('main_top').children[2];
     var main_top_r = $('main_top').children[3];
     for (i=0;i<left_ul_allLis.length;i++){
-        (function(i){
+        (function(){
             var ul_li = left_ul_allLis[i];
             var ul_block = right_ul_allLis[i].children[0];
-            ul_li.onmouseover = function () {show(ul_block);
+            ul_li.onmouseover = function () {
                 hide(main_top_m);
                 hide(main_top_r);
                 show(ul_block);
