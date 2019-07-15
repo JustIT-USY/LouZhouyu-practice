@@ -6,11 +6,11 @@ function $(id) {
   //  return typeof clas === "string" ? document.getElementsByClassName(clas) : null;
 //}
 function show(obj) {
-    return obj.style.display = 'block';
+    return obj.style.display = 'block ! important';
 }
 
 function hide(obj) {
-    return obj.style.display = 'none';
+    return obj.style.display = 'none ! important';
 }
 
 function scroll() {

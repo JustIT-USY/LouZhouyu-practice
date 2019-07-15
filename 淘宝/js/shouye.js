@@ -353,51 +353,50 @@ window.onload = function () {
         constant1($('tbtt_ul'), -tbtt_indicatorIndex * 73, 10);
     }
     //4.4
-    var main_right_ul_1 = $('main_right_ul').children[0];
-    var main_right_ul_1_lis = main_right_ul_1.children;
-    var main_right_ul_2 = $('main_right_ul_2').children;
-    var vas = $('main_right_ul_2_1');
-    for(i=0;i<main_right_ul_1.length;i++){
-        (function () {
-            var li = main_right_ul_1_lis[i];
-            var li_1 = main_right_ul_2[i];
-            li.onmouseover = function () {
-               alert('00')
-            }
-        })(i);
+    var main_right_lis = $('main_right_ul_1').children;
+    var main_right_lis2 = $('main_right_ul_2').getElementsByClassName("main_right_ul_2");
+    for(i=0;i<main_right_lis.length;i++){
+        var main_right_li = main_right_lis[i];
+        main_right_li.index=i;
+        main_right_li.onmouseover = function () {
+            for(j=0;j<main_right_lis2.length;j++){
 
+                console.log(main_right_lis2);
+            }
+            show(main_right_lis2[this.index]);
+        }
     }
     //4.1主题市场
-    var left_ul = $('main_top_ul_1');
-    var left_ul_allLis = left_ul.children;
-    var right_ul = $('ul_right');
-    var right_ul_allLis = right_ul.children;
-    var main_top_m = $('main_top').children[2];
-    var main_top_r = $('main_top').children[3];
-    for (i=0;i<left_ul_allLis.length;i++){
-        (function(){
-            var ul_li = left_ul_allLis[i];
-            var ul_block = right_ul_allLis[i].children[0];
-            ul_li.onmouseover = function () {
-                hide(main_top_m);
-                hide(main_top_r);
-                show(ul_block);
-            };
-            ul_block.onmouseover = function(){
-                hide(main_top_m);
-                hide(main_top_r);
-                show(ul_block);
-            };
-            ul_li.onmouseout =function(){
-              hide(ul_block);
-              show(main_top_m);
-              show(main_top_r);
-            };
-            ul_block.onmouseout = function () {
-                hide(ul_block);
-                show(main_top_m);
-                show(main_top_r);
-            }
-        })(i);
-    }
+    // var left_ul = $('main_top_ul_1');
+    // var left_ul_allLis = left_ul.children;
+    // var right_ul = $('ul_right');
+    // var right_ul_allLis = right_ul.children;
+    // var main_top_m = $('main_top').children[2];
+    // var main_top_r = $('main_top').children[3];
+    // for (i=0;i<left_ul_allLis.length;i++){
+    //     (function(){
+    //         var ul_li = left_ul_allLis[i];
+    //         var ul_block = right_ul_allLis[i].children[0];
+    //         ul_li.onmouseover = function () {
+    //             hide(main_top_m);
+    //             hide(main_top_r);
+    //             show(ul_block);
+    //         };
+    //         ul_block.onmouseover = function(){
+    //             hide(main_top_m);
+    //             hide(main_top_r);
+    //             show(ul_block);
+    //         };
+    //         ul_li.onmouseout =function(){
+    //           hide(ul_block);
+    //           show(main_top_m);
+    //           show(main_top_r);
+    //         };
+    //         ul_block.onmouseout = function () {
+    //             hide(ul_block);
+    //             show(main_top_m);
+    //             show(main_top_r);
+    //         }
+    //     })(i);
+    // }
 };
