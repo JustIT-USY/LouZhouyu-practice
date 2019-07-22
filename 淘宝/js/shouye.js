@@ -355,48 +355,66 @@ window.onload = function () {
     //4.4
     var main_right_lis = $('main_right_ul_1').children;
     var main_right_lis2 = $('main_right_ul_2').getElementsByClassName("main_right_ul_2");
+    main_right_lis[0].style.borderBottom = 'medium solid red';           //设置下边框的样式
     for(i=0;i<main_right_lis.length;i++){
         var main_right_li = main_right_lis[i];
         main_right_li.index=i;
         main_right_li.onmouseover = function () {
             for(j=0;j<main_right_lis2.length;j++){
-
-                console.log(main_right_lis2);
+                hide(main_right_lis2[j]);
+                main_right_lis[j].style.borderBottom = 'none';
             }
             show(main_right_lis2[this.index]);
+            main_right_lis[this.index].style.borderBottom = 'medium solid red';
         }
     }
+    //4.5分类
+
+
+    //4.6app
+    var main_appEWMlis = $('main_app').getElementsByClassName("main_app");
+    var main_appTBlis = $('main_app').getElementsByTagName("a");
+    for(i=0;i<main_appTBlis.length;i++){
+        (function (i) {
+            main_appTBlis[i].onmouseover = function () {
+                show(main_appEWMlis[i-1]);
+            };
+            main_appTBlis[i].onmouseout =function () {
+                hide(main_appEWMlis[i-1]);
+            }
+        })(i);
+    }
     //4.1主题市场
-    // var left_ul = $('main_top_ul_1');
-    // var left_ul_allLis = left_ul.children;
-    // var right_ul = $('ul_right');
-    // var right_ul_allLis = right_ul.children;
-    // var main_top_m = $('main_top').children[2];
-    // var main_top_r = $('main_top').children[3];
-    // for (i=0;i<left_ul_allLis.length;i++){
-    //     (function(){
-    //         var ul_li = left_ul_allLis[i];
-    //         var ul_block = right_ul_allLis[i].children[0];
-    //         ul_li.onmouseover = function () {
-    //             hide(main_top_m);
-    //             hide(main_top_r);
-    //             show(ul_block);
-    //         };
-    //         ul_block.onmouseover = function(){
-    //             hide(main_top_m);
-    //             hide(main_top_r);
-    //             show(ul_block);
-    //         };
-    //         ul_li.onmouseout =function(){
-    //           hide(ul_block);
-    //           show(main_top_m);
-    //           show(main_top_r);
-    //         };
-    //         ul_block.onmouseout = function () {
-    //             hide(ul_block);
-    //             show(main_top_m);
-    //             show(main_top_r);
-    //         }
-    //     })(i);
-    // }
+    var left_ul = $('main_top_ul_1');
+    var left_ul_allLis = left_ul.children;
+    var right_ul = $('ul_right');
+    var right_ul_allLis = right_ul.children;
+    var main_top_m = $('main_top').children[2];
+    var main_top_r = $('main_top').children[3];
+    for (i=0;i<left_ul_allLis.length;i++){
+        (function(){
+            var ul_li = left_ul_allLis[i];
+            var ul_block = right_ul_allLis[i].children[0];
+            ul_li.onmouseover = function () {
+                hide(main_top_m);
+                hide(main_top_r);
+                show(ul_block);
+            };
+            ul_block.onmouseover = function(){
+                hide(main_top_m);
+                hide(main_top_r);
+                show(ul_block);
+            };
+            ul_li.onmouseout =function(){
+              hide(ul_block);
+              show(main_top_m);
+              show(main_top_r);
+            };
+            ul_block.onmouseout = function () {
+                hide(ul_block);
+                show(main_top_m);
+                show(main_top_r);
+            }
+        })(i);
+    }
 };
