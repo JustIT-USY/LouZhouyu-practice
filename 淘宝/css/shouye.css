@@ -788,14 +788,14 @@ body{
     height: 232px;
 
 }
-#main_right_fenlei li{
+.main_fl{
     color: #333;
     width: 70px;
     height: 75px;
     border: 1px solid #f4f4f4;
     float: left;
 }
-#main_right_fenlei li :hover{
+.main_fl a:hover{
     color: red;
 }
 #main_right_fenlei a{
@@ -819,6 +819,36 @@ body{
     background-position: 0 0;
     border-left-color: transparent;
     border-top-color: transparent;
+}
+#chf_top{
+    font-size: 13px;
+    width: 278px;
+    height: 26px;
+    line-height: 26px;
+}
+#chf_top li{
+    padding: 3px 10px;
+    color: #666;
+    float: left;
+}
+#chf_bottom{
+    padding-left: 15px;
+    position: absolute;
+    height: 117px;
+    width: 1160px;
+    left: 0;
+    transition: none;
+}
+#chf_bottom li{
+    float: left;
+    height: 117px;
+    width: 290px;
+}
+#chf_bottom li div{
+    position: absolute;
+    height: 100px;
+    width: 175px;
+    float: left;
 }
 .main_fenlei_2{
     border-left-color: transparent;

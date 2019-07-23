@@ -369,7 +369,31 @@ window.onload = function () {
         }
     }
     //4.5分类
-
+    var main_cll = $('main_cll');
+    var llxz = $('llxz');
+    var chf_toplis = $('chf_top').children;
+    var chf_bottomlis = $('chf_bottom').children;
+    main_cll.onclick = function () {
+        show(llxz);
+    };
+    llxz.onmouseover = function(){
+      show(llxz)
+    };
+    main_cll.onmouseout = function () {
+      hide(llxz);
+    };
+    llxz.onmouseout = function () {
+        hide(llxz);
+    };
+    for(i=0;i<chf_toplis.length;i++){
+        var top_li = chf_toplis.children[i];
+        top_li.onmouseover = (function () {
+            for (j=0;j<chf_toplis.length;j++){
+                hide(chf_bottomlis[j]);
+            }
+            show(chf_bottomlis[i]);
+        })(i);
+    }
 
     //4.6app
     var main_appEWMlis = $('main_app').getElementsByClassName("main_app");
