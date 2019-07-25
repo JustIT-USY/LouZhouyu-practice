@@ -92,6 +92,31 @@ window.onload = function () {
         hide(guanbi);
         hide(EWM_logo);
     };
+    //2.4吸顶搜索框
+    var xiding_li = $('xiding_ul').children;
+    var xiding = $('xiding');
+    hide(xiding);hide(xiding_li[1]);hide(xiding_li[2]);
+    xiding_li[0].onmouseover = function () {
+        xiding_li[0].style.borderBottomLeftRadius = 0 + 'px';
+      show(xiding_li[1]);show(xiding_li[2]);
+    };
+    xiding_li[1].onmouseover = function () {
+        show(xiding_li[1]);show(xiding_li[2]);xiding_li[0].style.borderBottomLeftRadius = 0 + 'px';
+    };
+    xiding_li[2].onmouseover = function () {
+        show(xiding_li[1]);show(xiding_li[2]);xiding_li[0].style.borderBottomLeftRadius = 0 + 'px';
+    };
+    $('xiding_ul').onmouseout = function () {
+        xiding_li[0].style.borderBottomLeftRadius = 20 + 'px';
+        hide(xiding_li[1]);hide(xiding_li[2]);
+    };
+    window.onscroll = function () {
+      var scroll_top_height = scroll().top;
+      if(scroll_top_height >= 190){
+          show(xiding);
+      }
+      else hide(xiding);
+    };
 
     //3.2旺旺背景图
     var dafenlei_1 = $('dafenlei_1');
@@ -371,8 +396,18 @@ window.onload = function () {
     //4.5分类
     var main_cll = $('main_cll');
     var llxz = $('llxz');
+    var chf = $('chonghuafei');
+    var ul_fenlei = $('main_right_fenlei').children[0];
+    var chf_li = ul_fenlei.children[0];
     var chf_toplis = $('chf_top').children;
-    var chf_bottomlis = $('chf_bottom').children;
+    var chf_bottom = $('chf_bottom');
+    hide(chf);
+    chf_li.onmouseover = function(){
+        show(chf);
+    };
+    chf_li.onmouseout = function(){
+        hide(chf);
+    };
     main_cll.onclick = function () {
         show(llxz);
     };
@@ -386,14 +421,15 @@ window.onload = function () {
         hide(llxz);
     };
     for(i=0;i<chf_toplis.length;i++){
-        var top_li = chf_toplis.children[i];
-        top_li.onmouseover = (function () {
-            for (j=0;j<chf_toplis.length;j++){
-                hide(chf_bottomlis[j]);
+        (function (i) {
+            chf_toplis[i].onmouseover = function () {
+                var left = (-275 * i);
+                chf_bottom.style.left = left + 'px';
             }
-            show(chf_bottomlis[i]);
         })(i);
+
     }
+
 
     //4.6app
     var main_appEWMlis = $('main_app').getElementsByClassName("main_app");

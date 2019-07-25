@@ -142,6 +142,7 @@ body{
     height: 121px;
 }
 .top_logo{
+    margin-top: 20px;
     margin-left: 23px;
     float: right;
     position: absolute;
@@ -232,10 +233,9 @@ body{
     color: #FFF;
     background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
     cursor: pointer;
-    height: 100%;
     border: none;
     width: 100%;
-
+    height: 100%;
 }
 #sjTB_logo{
     position: relative;
@@ -300,6 +300,63 @@ body{
 }
 #dafenlei_1 ul li a{
     color: #fff;
+}
+#xiding{z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+}
+#xiding_1{
+    line-height: 55px;
+
+    margin: 0 auto;
+    width: 1190px;
+    height: 55px;
+}
+#xiding_1 ul{
+    border-left: 2px orangered solid;
+    border-top: 2px orangered solid;
+    border-bottom: 2px orangered solid;
+    top: -6px;
+    left: 5px;
+    position: relative;text-align: center;line-height: 38px;float: left;
+    font-size: 13px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-weight: 700;
+    color: black;
+    background-color: rgb(244,244,244);
+    cursor: pointer;
+    width: 75px;
+    height: 38px;
+}
+#xiding_1 ul li{
+    background-color: rgb(244,244,244);
+}
+#xiding_1 input{
+    border-top: 2px orangered solid;
+    border-bottom: 2px orangered solid;
+    width: 485px;height: 38px;position:relative;left:5px;top: -15px;
+    border-left: none;
+    border-right: none;
+}
+#xiding_1 button{
+    border-right: 2px orangered solid;
+    border-top: 2px orangered solid;
+    border-bottom: 2px orangered solid;
+    border-left: none;
+    top: -12px;position: relative;
+    font-size: 18px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-weight: 700;
+    color: #FFF;
+    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    cursor: pointer;
+    width: 75px;
+    height: 42px;
 }
 .main{
     width: 1190px;
@@ -784,6 +841,7 @@ body{
     display: none;
 }
 #main_right_fenlei{
+    z-index: -2;
     width: 290px;
     height: 232px;
 
@@ -820,19 +878,29 @@ body{
     border-left-color: transparent;
     border-top-color: transparent;
 }
+#chonghuafei{
+    width: 289px;height: 158px;
+}
 #chf_top{
+    position: absolute;
     font-size: 13px;
     width: 278px;
     height: 26px;
     line-height: 26px;
 }
 #chf_top li{
+    cursor: pointer;
     padding: 3px 10px;
     color: #666;
     float: left;
 }
+#chf_top li:hover{
+    color: red;
+}
 #chf_bottom{
-    padding-left: 15px;
+    margin-top: 26px;
+    padding-top: 10px;
+    padding-left: 35px;
     position: absolute;
     height: 117px;
     width: 1160px;
@@ -842,7 +910,7 @@ body{
 #chf_bottom li{
     float: left;
     height: 117px;
-    width: 290px;
+    width: 275px;
 }
 #chf_bottom li div{
     position: absolute;
