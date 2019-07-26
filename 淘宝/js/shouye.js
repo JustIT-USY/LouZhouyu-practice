@@ -454,6 +454,28 @@ window.onload = function () {
     wyewm.onmouseout = function () {
         hide(yhh_ewm);
     };
+    //5.2淘抢购
+    var tqg1 = 6;
+    var tqg2 = 14;
+    var tqg3 = 63;
+    var tqg_fg1 = $('tqg_fg1');
+    var tqg_fg2 = $('tqg_fg2');
+    var tqg_fg3 = $('tqg_fg3');
+    var tqg_value1 = $('tqg_value1');
+    var tqg_value2 = $('tqg_value2');
+    var tqg_value3 = $('tqg_value3');
+    var tqg_yqsll = $('tqg_yqsl1');
+    var tqg_yqsl2 = $('tqg_yqsl2');
+    var tqg_yqsl3 = $('tqg_yqsl3');
+    tqg_fg1 .style.width = (tqg1 * 1.6) + 'px';
+    tqg_fg2 .style.width = (tqg2 * 1.6) + 'px';
+    tqg_fg3 .style.width = (tqg3 * 1.6) + 'px';
+    tqg_value1.innerHTML = tqg1 + '%';
+    tqg_value2.innerHTML = tqg2 + '%';
+    tqg_value3.innerHTML = tqg3 + '%';
+    tqg_yqsl1.innerHTML = '已抢97件';
+    tqg_yqsl2.innerHTML = '已抢20件';
+    tqg_yqsl3.innerHTML = '已抢1519件';
     //4.1主题市场
     var left_ul = $('main_top_ul_1');
     var left_ul_allLis = left_ul.children;

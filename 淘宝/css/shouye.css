@@ -1012,8 +1012,8 @@ body{
     overflow: hidden;
 }
 #aghh{
+    background-color: #fff;
     position: relative;
-    background-color: gold;
     height: 658px;
     width: 1190px;
     margin: 0 auto;
@@ -1021,12 +1021,10 @@ body{
 }
 #yhh{
     float: left;
-    background-color: green;
     width: 590px;
     height: 658px;
 }
 #agj{
-    background-color: pink;
     width: 590px;
     height: 658px;
     float: right;
@@ -1034,7 +1032,6 @@ body{
 .yhh{
     width: 550px;
     height: 618px;
-    background-color: #fff;
     margin: 20px;
 }
 .yhh h3 img{
@@ -1103,7 +1100,6 @@ body{
     position: absolute;
     width: 550px;
     height: 618px;
-    background-color: #fff;
     margin: 20px;
 }
 .agj h3 img{
@@ -1124,6 +1120,81 @@ body{
 }
 .agj_yinhao img{
     width: 20px;
+}
+#tqg{
+    background-color: pink;
+    width: 1190px;
+    height: 264px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#tqg h3{
+    position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+#tqg ul{
+    width: 1190px;
+    height: 180px;
+}
+#tqg ul li{
+    float: left;
+    width: 355px;
+    padding: 0 20px 0 20px;
+}
+#tqg ul h4{
+    margin-top: 11px;
+    line-height: 22px;
+    height: 44px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+#tqg ul li a p{
+    margin-top: 12px;
+    line-height: 28px;
+    color: #999;
+}
+.tqg_img{
+    float: left;
+    width: 180px;
+    height: 180px;
+}
+.tqg_wenzi{
+    margin-left: 194px;
+    overflow: hidden;
+}
+.tqg_cunliang{
+    position: relative;
+    margin-left: 194px;
+    width: 160px;
+    line-height: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 20px;
+}
+.tqg_fg{
+    width: 0;
+    height: 100%;
+    float: left;
+    background-color: red;
+    border-radius: 20px;
+}
+.tqg_value{
+    position: absolute;
+    float: left;
+    top: 18px;
+    left: 0;
+    color: red;
+}
+.tqg_yqsl{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    color: red;
+    float: right;
 }
 #bottom{
     background-color: #fff;
