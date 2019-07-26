@@ -444,6 +444,16 @@ window.onload = function () {
             }
         })(i);
     }
+
+    //5.1有好货
+    var wyewm = $('wyewm');
+    var yhh_ewm = $('yhh_ewm');
+    wyewm.onmouseover = function () {
+      show(yhh_ewm);
+    };
+    wyewm.onmouseout = function () {
+        hide(yhh_ewm);
+    };
     //4.1主题市场
     var left_ul = $('main_top_ul_1');
     var left_ul_allLis = left_ul.children;

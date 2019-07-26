@@ -1011,6 +1011,120 @@ body{
     color: #666;
     overflow: hidden;
 }
+#aghh{
+    position: relative;
+    background-color: gold;
+    height: 658px;
+    width: 1190px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#yhh{
+    float: left;
+    background-color: green;
+    width: 590px;
+    height: 658px;
+}
+#agj{
+    background-color: pink;
+    width: 590px;
+    height: 658px;
+    float: right;
+}
+.yhh{
+    width: 550px;
+    height: 618px;
+    background-color: #fff;
+    margin: 20px;
+}
+.yhh h3 img{
+    float: left;
+    height: 24px;
+    margin-right: 10px;
+}
+.yhh p p{
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    text-align: center;
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+}
+#yhh_ewm{
+    z-index: 3;
+    background-color: #fff;
+    border: 1px #dddddd solid;
+    top: 24px;left: -45px;width: 88px;height: 102px;position: absolute;font-size: 13px;
+    line-height: 24px;text-align: center;display: none;
+}
+#yhh_ul{
+    width: 580px;
+    height: 594px;
+    overflow: hidden;
+}
+#yhh_ul a{
+    display: block;
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    margin: 20px 4px 0 0;
+}
+.yhh_wenzi h4{
+    color: #333333;
+    margin-top: 5px;
+    font-size: 16px;
+    height: 28px;
+    overflow: hidden;
+    line-height: 28px;
+    font-weight: normal;
+}
+.yhh_wenzi p{
+    line-height: 24px;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    height: 24px;
+}
+.yhh_smile{
+    line-height: 22px;
+    height: 22px;
+    margin-top: 12px;
+    color: #35b1ff;
+}
+.yhh_smile img{
+    width: 14px;
+}
+.agj{
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 550px;
+    height: 618px;
+    background-color: #fff;
+    margin: 20px;
+}
+.agj h3 img{
+    float: left;
+    height: 24px;
+    margin-right: 10px;
+}
+.agj_ul{
+    width: 570px;
+    height: 594px;
+    overflow: hidden;
+}
+.agj_ul a{
+    display: block;
+    float: left;
+    width: 180px;
+    margin: 20px 4px 0 0;
+}
+.agj_yinhao img{
+    width: 20px;
+}
 #bottom{
     background-color: #fff;
     height: 275px;
