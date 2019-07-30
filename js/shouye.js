@@ -478,7 +478,20 @@ window.onload = function () {
     //5.3中间广告
 
 
+    //猜你喜欢
+    var cnxhlis = $('cnxh').getElementsByClassName('cnxh');
+    var zxslis = $('cnxh').getElementsByClassName('zxs');
+    for(i=0;i<cnxhlis.length;i++){
+        (function (i) {
+            cnxhlis[i].onmouseover = function () {
+                show(zxslis[i])
+            };
+            cnxhlis[i].onmouseout = function () {
+                hide(zxslis[i])
+            }
+        })(i);
 
+    }
     //4.1主题市场
     var left_ul = $('main_top_ul_1');
     var left_ul_allLis = left_ul.children;
